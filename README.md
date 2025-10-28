@@ -10,6 +10,37 @@ The pipeline processes FASTQ files from your CGGA WGS data to identify the two k
 
 These SNPs determine whether you have ε2, ε3, or ε4 alleles.
 
+## Targeted APOE patches (exon slices)
+
+For rapid demonstrations or validation runs against existing BAM/CRAM files you
+can use the new `apoe_analysis/apoe_patches.py` helper.  It wraps the PI
+"exon 2" patch and the scientific validation track (exon 4 + rs429358/rs7412)
+into reproducible commands:
+
+```bash
+python -m apoe_analysis.apoe_patches patch-a \
+  --bam /path/to/sample.bam \
+  --reference /path/to/GRCh38.fa \
+  --gtf /path/to/genes.gtf \
+  --output-dir patch_outputs
+
+python -m apoe_analysis.apoe_patches patch-b \
+  --bam /path/to/sample.bam \
+  --reference /path/to/GRCh38.fa \
+  --gtf /path/to/genes.gtf \
+  --output-dir patch_outputs \
+  --build hg38
+```
+
+* `patch-a` generates exon 2 read slices (`*_APOE_exon2.bam`), reference
+  sequences, and depth summaries exactly as requested by the PI.
+* `patch-b` adds exon 4 extraction plus targeted calls for rs429358/rs7412,
+  producing BAM, FASTA, compressed VCF, and a ready-to-share TSV report.
+
+Supply multiple `--bam` arguments (optionally paired with `--label`) to process
+tumour/normal or cohort BAMs together.  Outputs are organised per-sample and a
+JSON manifest summarises the generated artefacts.
+
 ## Your Data
 
 Located in `E:\`:
