@@ -1,0 +1,7 @@
+{
+  "HRR024685": {
+    "exon2_bam": "/mnt/d/APOE/patch_validation/HRR024685/HRR024685_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/patch_validation/HRR024685/HRR024685_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  }
+}

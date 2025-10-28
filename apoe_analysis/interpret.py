@@ -129,10 +129,10 @@ def read_targets_from_vcf(vcf_path: Path, targets: Iterable[VariantTarget]) -> D
             sample_id = _extract_sample_id(raw_line)
             continue
         if not raw_line.strip():
-            continue
+                    continue
 
         fields = raw_line.split("\t")
-        if len(fields) < 10:
+                if len(fields) < 10:
             # Not a complete single-sample VCF record.
             continue
 
@@ -146,7 +146,7 @@ def read_targets_from_vcf(vcf_path: Path, targets: Iterable[VariantTarget]) -> D
         if not target:
             target = by_position.get(position)
         if not target:
-            continue
+                    continue
 
         format_fields = fmt.split(":")
         sample_fields = sample.split(":")
@@ -158,7 +158,7 @@ def read_targets_from_vcf(vcf_path: Path, targets: Iterable[VariantTarget]) -> D
             )
 
         try:
-            genotype = sample_fields[gt_index]
+                    genotype = sample_fields[gt_index]
         except IndexError:
             raise InterpretationError(
                 f"Sample column for {target.name} in '{vcf_path}' does not contain GT values."
@@ -360,7 +360,7 @@ def main() -> None:
     except InterpretationError as exc:
         raise SystemExit(f"Unable to interpret APOE genotype:\n{exc}") from exc
 
-    risk, desc, rel_risk = clinical_interp(genotype)
+risk, desc, rel_risk = clinical_interp(genotype)
 
     output_lines = ["=" * 80, "APOE GENOTYPING REPORT", "=" * 80, ""]
     output_lines.append(f"Sample ID: {sample_id or 'Unknown Sample'}")
@@ -393,7 +393,7 @@ def main() -> None:
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text("\n".join(output_lines) + "\n")
 
-    print(f"APOE Genotype: {genotype} | Risk: {risk}")
+print(f"APOE Genotype: {genotype} | Risk: {risk}")
 
 
 if __name__ == "__main__":

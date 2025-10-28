@@ -1,3 +1,0 @@
-=== APOE PIPELINE AUTO-MONITOR ===
-Started: Sun Oct 26 22:13:58 EDT 2025
-

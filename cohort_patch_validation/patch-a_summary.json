@@ -1,0 +1,122 @@
+{
+  "HRR024686.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024686.apoe/HRR024686.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024686.apoe/HRR024686.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.62"
+  },
+  "HRR024687.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024687.apoe/HRR024687.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024687.apoe/HRR024687.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024688.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024688.apoe/HRR024688.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024688.apoe/HRR024688.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024689.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024689.apoe/HRR024689.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024689.apoe/HRR024689.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024690.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024690.apoe/HRR024690.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024690.apoe/HRR024690.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.28"
+  },
+  "HRR024691.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024691.apoe/HRR024691.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024691.apoe/HRR024691.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.02"
+  },
+  "HRR024692.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024692.apoe/HRR024692.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024692.apoe/HRR024692.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.33"
+  },
+  "HRR024693.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024693.apoe/HRR024693.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024693.apoe/HRR024693.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.86"
+  },
+  "HRR024694.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024694.apoe/HRR024694.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024694.apoe/HRR024694.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024695.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024695.apoe/HRR024695.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024695.apoe/HRR024695.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024696.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024696.apoe/HRR024696.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024696.apoe/HRR024696.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024698.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024698.apoe/HRR024698.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024698.apoe/HRR024698.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.31"
+  },
+  "HRR024699.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024699.apoe/HRR024699.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024699.apoe/HRR024699.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "1.20"
+  },
+  "HRR024700.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024700.apoe/HRR024700.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024700.apoe/HRR024700.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.55"
+  },
+  "HRR024701.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024701.apoe/HRR024701.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024701.apoe/HRR024701.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "1.90"
+  },
+  "HRR024702.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024702.apoe/HRR024702.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024702.apoe/HRR024702.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "1.32"
+  },
+  "HRR024703.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024703.apoe/HRR024703.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024703.apoe/HRR024703.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024704.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024704.apoe/HRR024704.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024704.apoe/HRR024704.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024705.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024705.apoe/HRR024705.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024705.apoe/HRR024705.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024706.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024706.apoe/HRR024706.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024706.apoe/HRR024706.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.00"
+  },
+  "HRR024707.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024707.apoe/HRR024707.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024707.apoe/HRR024707.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.46"
+  },
+  "HRR024708.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024708.apoe/HRR024708.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024708.apoe/HRR024708.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.43"
+  },
+  "HRR024709.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024709.apoe/HRR024709.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024709.apoe/HRR024709.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "1.00"
+  },
+  "HRR024710.apoe": {
+    "exon2_bam": "/mnt/d/APOE/cohort_patch_validation/HRR024710.apoe/HRR024710.apoe_APOE_exon2.bam",
+    "exon2_fasta": "/mnt/d/APOE/cohort_patch_validation/HRR024710.apoe/HRR024710.apoe_APOE_exon2.fasta",
+    "exon2_mean_depth": "0.15"
+  }
+}
