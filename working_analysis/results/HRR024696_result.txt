@@ -1,0 +1,19 @@
+Sample: HRR024696
+Date: Mon Oct 27 09:16:09 EDT 2025
+Status: SUCCESS
+
+Coverage:
+- APOE region: 25.81x
+- rs429358: 33x
+- rs7412: 8x
+
+Genotypes:
+- rs429358 (Arg112Cys): T/T
+- rs7412 (Cys158Arg): C/C
+
+APOE Genotype: ε3/ε3
+Alzheimer's Risk: Baseline (1.0x)
+
+Raw Data:
+- rs429358 bases: ,$,,,,$,,,,,,,,,,,,.,,,.,,..,.,,.,,
+- rs7412 bases: ,.,,,.,,

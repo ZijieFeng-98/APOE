@@ -1,0 +1,44 @@
+# Data files - exclude large sequencing and alignment data
+*.bam
+*.bai
+*.fq.gz
+*.fastq.gz
+*.vcf.gz
+*.vcf.gz.csi
+*.sam
+
+# Reference genome files
+reference/
+*.fasta
+*.fasta.fai
+*.fasta.amb
+*.fasta.ann
+*.fasta.bwt
+*.fasta.pac
+*.fasta.sa
+
+# Large data directories
+apoe_analysis/alignment/
+apoe_analysis/variants/*.vcf.gz*
+batch_analysis/*/alignment/
+batch_analysis/*/variants/*.vcf.gz*
+fast_analysis/*/alignment/
+fast_analysis/*/variants/*.vcf.gz*
+final_analysis/*/alignment/
+final_analysis/*/variants/*.vcf.gz*
+reanalysis/*/alignment/
+reanalysis/*/variants/*.vcf.gz*
+ultra_fast/*/alignment/
+ultra_fast/*/variants/*.vcf.gz*
+working_analysis/*/alignment/
+working_analysis/*/variants/*.vcf.gz*
+
+# Raw sequencing data
+HRR024685_f1.fq.gz
+HRR024685_r2.fq.gz
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+

@@ -1,0 +1,33 @@
+APOE PIPELINE STATUS - LIVE MONITORING
+========================================
+
+Started: 2025-10-20 01:46:29
+Last Update: 01:50 (monitoring active)
+
+CURRENT STATUS: ✓ RUNNING SMOOTHLY
+
+Progress:
+✓ Reference genome downloaded (3.0 GB)
+✓ BWA indexing IN PROGRESS (30+ iterations)
+⏳ Alignment pending
+⏳ Variant calling pending
+⏳ Report generation pending
+
+Pipeline Process: ACTIVE (PID 4672)
+Watchdog: ACTIVE (auto-restart enabled)
+
+Estimated completion: 45-120 minutes from start
+Next major milestone: BWA indexing complete (~15-30 min)
+
+========================================
+YOU CAN SLEEP! Everything is monitored.
+========================================
+
+When you wake up:
+1. Check: D:\APOE\apoe_analysis\results\HRR024685_apoe_report.txt
+2. If exists → Your APOE genotype is ready!
+3. If not → Check pipeline_output.log for status
+
+The watchdog will auto-restart if anything stops.
+
+

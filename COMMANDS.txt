@@ -1,0 +1,119 @@
+========================================
+APOE ANALYSIS - MANUAL COMMANDS
+========================================
+
+Follow these steps in Ubuntu terminal:
+
+STEP 1: Open Ubuntu
+-------------------
+- Press Windows Key
+- Type "Ubuntu"
+- Click "Ubuntu 22.04 LTS"
+
+
+STEP 2: Install Tools (5 minutes)
+----------------------------------
+Copy and paste these commands one by one:
+
+sudo apt update
+sudo apt install -y bwa samtools bcftools wget
+
+When prompted, enter your password: 980306FZj@
+
+
+STEP 3: Run the Pipeline (30-120 minutes)
+------------------------------------------
+cd /mnt/d/APOE
+chmod +x apoe_pipeline.sh
+./apoe_pipeline.sh
+
+
+STEP 4: View Your Results
+--------------------------
+cat apoe_analysis/results/HRR024685_apoe_report.txt
+
+
+========================================
+ALTERNATIVE: One Command to Do Everything
+========================================
+
+If you want to run everything at once:
+
+cd /mnt/d/APOE && bash setup_and_run.sh
+
+
+========================================
+FILES LOCATION
+========================================
+
+All files are in: D:\APOE\
+- HRR024685_f1.fq.gz (your FASTQ data)
+- HRR024685_r2.fq.gz (your FASTQ data)
+- apoe_pipeline.sh (main pipeline)
+- setup_and_run.sh (install + run)
+
+In Ubuntu/WSL, this is: /mnt/d/APOE/
+
+
+========================================
+WHAT THE PIPELINE DOES
+========================================
+
+1. Downloads human reference genome (~3 GB)
+2. Indexes the reference
+3. Aligns your FASTQ reads
+4. Extracts APOE gene region (chr19)
+5. Calls variants at two key SNPs:
+   - rs429358 (chr19:45411941)
+   - rs7412 (chr19:45412079)
+6. Determines your APOE genotype (ε2/ε3/ε4)
+7. Provides Alzheimer's disease risk assessment
+
+
+========================================
+EXPECTED OUTPUT
+========================================
+
+You will get a report showing:
+- Your APOE genotype (e.g., ε3/ε4)
+- Risk category (reduced/average/increased)
+- Relative Alzheimer's risk
+- Clinical interpretation
+
+Example:
+  APOE Genotype: ε3/ε3
+  Risk Category: AVERAGE RISK
+  Relative Risk: 1x (population average)
+
+
+========================================
+NEED HELP?
+========================================
+
+If you get errors:
+1. Make sure you have 50+ GB free space: df -h /mnt/d/
+2. Check tools are installed: which bwa samtools bcftools
+3. Verify FASTQ files exist: ls -lh /mnt/d/APOE/*.fq.gz
+
+For questions, check the documentation files:
+- README.md - Complete documentation
+- WINDOWS_SETUP.md - Windows-specific setup
+- INSTALLATION_GUIDE.md - Tool installation details
+- QUICK_START.md - Quick start guide
+
+
+========================================
+ESTIMATED TIME
+========================================
+
+Total time: 30-120 minutes (varies by CPU)
+- Reference download: 10-30 min
+- Read alignment: 20-90 min  
+- Variant calling: 1-5 min
+- Report generation: <1 min
+
+You can leave it running and come back later!
+
+
+========================================
+

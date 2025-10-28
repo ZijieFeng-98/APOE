@@ -1,0 +1,16 @@
+==========================================
+[1;33mBULLETPROOF APOE PIPELINE[0m
+==========================================
+Samples: 24 | Threads: 12
+Start: Sun Oct 26 22:13:16 EDT 2025
+==========================================
+
+[0;34m[1/24] HRR024686 - 22:13:16[0m
+[0;31m✗ FAILED (see /mnt/d/APOE/final_analysis/logs/HRR024686.log)[0m
+[0;34mProgress: 0 success, 1 failed, 23 remaining[0m
+
+[0;34m[2/24] HRR024687 - 22:17:12[0m
+[0;31m✗ FAILED (see /mnt/d/APOE/final_analysis/logs/HRR024687.log)[0m
+[0;34mProgress: 0 success, 2 failed, 22 remaining[0m
+
+[0;34m[3/24] HRR024688 - 22:21:37[0m

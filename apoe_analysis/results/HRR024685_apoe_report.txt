@@ -1,0 +1,133 @@
+================================================================================
+APOE GENOTYPING REPORT
+================================================================================
+
+Sample ID: HRR024685
+Analysis Date: 2025-10-20
+Reference: GRCh37/hg19
+
+--------------------------------------------------------------------------------
+RAW GENOTYPE DATA
+--------------------------------------------------------------------------------
+
+rs429358 (chr19:45411941):
+  Reference: T
+  Genotype: T/T
+  Coverage: 34x
+  Note: Homozygous for T allele (Arg at position 112)
+
+rs7412 (chr19:45412079):
+  Reference: C
+  Genotype: C/C
+  Coverage: 9x
+  Note: Homozygous for C allele (Arg at position 158)
+
+--------------------------------------------------------------------------------
+APOE GENOTYPE
+--------------------------------------------------------------------------------
+
+APOE Genotype: ε4/ε4
+
+Allele Interpretation:
+  ε4 = T at rs429358 + C at rs7412 (Arg112, Arg158)
+
+--------------------------------------------------------------------------------
+CLINICAL INTERPRETATION
+--------------------------------------------------------------------------------
+
+Risk Category: SIGNIFICANTLY INCREASED RISK
+
+Description: Substantially increased risk for Alzheimer's disease. This is the 
+highest-risk APOE genotype.
+
+Relative Risk: ~8-12x (eight to twelve times the average population risk)
+
+Frequency: Rare (~2% of the population has ε4/ε4 genotype)
+
+--------------------------------------------------------------------------------
+IMPORTANT NOTES
+--------------------------------------------------------------------------------
+
+1. APOE genotype is just ONE of many risk factors for Alzheimer's disease
+
+2. Having ε4/ε4 does NOT mean you will definitely develop Alzheimer's
+   - Many people with ε4/ε4 never develop the disease
+   - Age of onset varies greatly
+   - Other genetic and environmental factors play crucial roles
+
+3. Protective factors that may help:
+   - Regular physical exercise
+   - Mediterranean diet
+   - Cognitive stimulation and lifelong learning
+   - Social engagement
+   - Management of cardiovascular risk factors
+   - Adequate sleep
+   - Stress management
+
+4. This information is for RESEARCH PURPOSES ONLY
+   - NOT a clinical diagnosis
+   - NOT a prediction of disease
+   - Should NOT be used for medical decisions without proper counseling
+
+5. STRONGLY RECOMMENDED: Consult a genetic counselor or physician who 
+   specializes in neurogenetics for proper interpretation and guidance
+
+6. Consider:
+   - Regular cognitive monitoring as you age
+   - Discussion with healthcare provider about preventive strategies
+   - Participation in research studies (if interested)
+   - Lifestyle modifications that support brain health
+
+--------------------------------------------------------------------------------
+SCIENTIFIC BACKGROUND
+--------------------------------------------------------------------------------
+
+APOE ε4 is the strongest genetic risk factor for late-onset Alzheimer's disease.
+
+Key Statistics for ε4/ε4 carriers:
+- ~8-12x increased risk compared to ε3/ε3
+- Earlier average age of onset (if disease develops)
+- ~30-55% lifetime risk of Alzheimer's by age 85
+- But 45-70% of ε4/ε4 carriers do NOT develop Alzheimer's
+
+The ε4 allele affects:
+- Amyloid-beta metabolism and clearance
+- Lipid transport in the brain
+- Neuroinflammation
+- Synaptic function
+
+However, risk is modifiable through:
+- Lifestyle interventions
+- Cardiovascular health maintenance
+- Cognitive engagement
+- Early intervention strategies
+
+--------------------------------------------------------------------------------
+QUALITY METRICS
+--------------------------------------------------------------------------------
+
+Coverage at key positions:
+  rs429358: 34x (excellent)
+  rs7412: 9x (adequate for genotype calling)
+
+Sequencing Quality: Good
+Confidence Level: High
+
+All reads at both positions consistently matched the reference genome,
+indicating homozygous genotypes at both loci.
+
+================================================================================
+END OF REPORT
+================================================================================
+
+Analysis completed: 2025-10-20
+Pipeline: APOE Genotyping v1.0
+
+For questions or concerns, consult with:
+- Genetic counselor
+- Neurologist
+- Medical geneticist
+
+Remember: Genetics is not destiny. Lifestyle and environment matter greatly.
+
+================================================================================

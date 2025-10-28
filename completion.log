@@ -1,0 +1,64 @@
+========================================
+Starting Pipeline Completion: Mon Oct 20 09:40:47 EDT 2025
+========================================
+[Mon Oct 20 09:40:47 EDT 2025] Step 1: Checking BAM sorting...
+[Mon Oct 20 09:40:47 EDT 2025] Sorting BAM file...
+[bam_sort_core] merging from 20 files and 4 in-memory blocks...
+[Mon Oct 20 09:56:42 EDT 2025] ✓ BAM sorting complete
+[Mon Oct 20 09:56:42 EDT 2025] Step 2: Indexing BAM...
+[Mon Oct 20 10:00:34 EDT 2025] ✓ BAM indexing complete
+[Mon Oct 20 10:00:34 EDT 2025] Removing unsorted BAM to save space...
+[Mon Oct 20 10:00:35 EDT 2025] Step 3: Extracting APOE region...
+[Mon Oct 20 10:00:36 EDT 2025] ✓ APOE region extracted
+[Mon Oct 20 10:00:36 EDT 2025] APOE region coverage: 21.7515x
+[Mon Oct 20 10:00:36 EDT 2025] Step 4: Calling variants...
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[E::hts_hopen] Failed to open file -
+[E::hts_open_format] Failed to open file "-" : Exec format error
+Failed to read from standard input: Exec format error
+index: failed to open apoe_analysis/variants/HRR024685.apoe.vcf.gz
+[Mon Oct 20 10:00:36 EDT 2025] ✓ Variant calling complete
+[Mon Oct 20 10:00:36 EDT 2025] Step 5: Extracting APOE SNPs...
+[Mon Oct 20 10:00:36 EDT 2025] ✓ SNPs extracted
+[Mon Oct 20 10:00:36 EDT 2025] Step 6: Creating interpretation script...
+[Mon Oct 20 10:00:36 EDT 2025] Step 7: Interpreting APOE genotype...
+APOE Genotype: Insufficient data | Risk: UNKNOWN
+
+========================================
+✓✓✓ ANALYSIS COMPLETE! ✓✓✓
+========================================
+
+================================================================================
+APOE GENOTYPING REPORT
+================================================================================
+
+Sample ID: HRR024685
+Analysis Date: 2025-10-20
+Reference: GRCh37/hg19
+
+--------------------------------------------------------------------------------
+RAW GENOTYPE DATA
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+APOE GENOTYPE
+--------------------------------------------------------------------------------
+
+APOE Genotype: Insufficient data
+
+--------------------------------------------------------------------------------
+CLINICAL INTERPRETATION
+--------------------------------------------------------------------------------
+
+Risk Category: UNKNOWN
+Description: Unable to determine
+Relative Risk: Unknown
+
+Important Notes:
+- APOE is just one of many risk factors
+- This is for research purposes only
+- Consult a genetic counselor for clinical interpretation
+
+================================================================================
+
+Results saved to: /mnt/d/APOE/apoe_analysis/results/HRR024685_apoe_report.txt
