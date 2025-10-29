@@ -42,3 +42,8 @@ HRR024685_r2.fq.gz
 *.temp
 temp/
 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+

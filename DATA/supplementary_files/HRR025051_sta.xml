@@ -1,0 +1,38 @@
+<Run accession="/p300/HRA-Process/temp/HRA000071/HRR025051/HRR025051/" read_length="fixed" spot_count="40666507" base_count="12199952100" base_count_bio="12199952100" spot_count_mates="40666507" base_count_bio_mates="12199952100" spot_count_bad="0" base_count_bio_bad="0" spot_count_filtered="0" base_count_bio_filtered="0" cmp_base_count="12199952100">
+  <Size value="5830660628" units="bytes"/>
+  <Bases cs_native="false" count="12199952100">
+    <Base value="A" count="2880406977"/>
+    <Base value="C" count="3225909909"/>
+    <Base value="G" count="3218021632"/>
+    <Base value="T" count="2875207146"/>
+    <Base value="N" count="406436"/>
+  </Bases>
+  <GC-Content="52.8%"/>
+  <AlignInfo>
+  </AlignInfo>
+  <Statistics nreads="2" nspots="40666507">
+    <Read index="0" count="40666507" average="150" stdev="0"/>
+    <Read index="1" count="40666507" average="150" stdev="0"/>
+  </Statistics>
+  <Archive timestamp="2019-09-13T12:51:02" size.sra="5830661837" md5.sra="801a1f73e702b58ab913162d8f987038" size.lite.sra="5830661837" md5.lite.sra="801a1f73e702b58ab913162d8f987038" />
+  <QualityCount>
+    <Quality value="2" count="406436"/>
+    <Quality value="12" count="247587926"/>
+    <Quality value="22" count="47516238"/>
+    <Quality value="27" count="132098541"/>
+    <Quality value="29" count="68730999"/>
+    <Quality value="32" count="1764857413"/>
+    <Quality value="37" count="2100119369"/>
+    <Quality value="41" count="7838635178"/>
+  </QualityCount>
+  <Databases>
+    <Database>
+      <Table name="SEQUENCE">
+        <Statistics source="meta">
+          <Rows count="40666507"/>
+          <Elements count="12199952100"/>
+        </Statistics>
+      </Table>
+    </Database>
+  </Databases>
+</Run>
