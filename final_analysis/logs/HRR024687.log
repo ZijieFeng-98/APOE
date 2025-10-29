@@ -1,4 +1,0 @@
-[22:17:13] START: HRR024687
-[22:17:13] Aligning and sorting...
-samtools sort: failed to read header from "-"
-ERROR: Pipeline failed

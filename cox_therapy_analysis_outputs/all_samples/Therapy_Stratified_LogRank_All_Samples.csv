@@ -1,0 +1,4 @@
+Cohort,Therapy,N,APOE_groups,P_value
+All Samples,TMZ_only,3,ε2_carrier vs ε3/ε3,0.3173
+All Samples,RT_only,2,ε2_carrier vs ε3/ε3,0.3173
+All Samples,RT+TMZ,20,ε2_carrier vs ε3/ε3,0.3264

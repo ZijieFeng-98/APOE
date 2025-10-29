@@ -1,0 +1,2 @@
+/mnt/d/APOE/apoe_analysis/alignment/HRR024685.sorted.bam
+/mnt/d/APOE/batch_analysis/HRR024697/alignment/HRR024697.sorted.bam

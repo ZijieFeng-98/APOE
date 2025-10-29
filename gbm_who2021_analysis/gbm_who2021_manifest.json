@@ -1,0 +1,16 @@
+{
+  "classification": "WHO 2021 (Grade IV + IDH-wildtype ONLY)",
+  "total_gbm_patients": 14,
+  "idh_mutant_grade4_excluded": 3,
+  "files": {
+    "cox_table": "gbm_who2021_analysis/Table2_Cox_GBM_WHO2021.csv",
+    "survival_km": "gbm_who2021_analysis/survival_by_apoe_genotype_GBM_WHO2021.png",
+    "therapy_stratified_km": "gbm_who2021_analysis/Fig3_Therapy_Stratified_KM_GBM_WHO2021.png",
+    "cohort_data": "gbm_who2021_analysis/GBM_WHO2021_Cohort_Data.xlsx"
+  },
+  "genotypes": {
+    "\u03b52/\u03b53": 5,
+    "\u03b52/\u03b54": 1,
+    "\u03b53/\u03b53": 8
+  }
+}

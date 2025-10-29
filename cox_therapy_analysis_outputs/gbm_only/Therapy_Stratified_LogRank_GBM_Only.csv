@@ -1,0 +1,4 @@
+Treatment,N,Deaths,Death_Rate_%,Median_Survival_Months
+Radio+Chemo,15,12,80.0,24.0
+Radio only,2,2,100.0,11.1
+Chemo only,3,2,66.7,15.1

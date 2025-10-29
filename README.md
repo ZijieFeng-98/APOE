@@ -41,6 +41,25 @@ Supply multiple `--bam` arguments (optionally paired with `--label`) to process
 tumour/normal or cohort BAMs together.  Outputs are organised per-sample and a
 JSON manifest summarises the generated artefacts.
 
+## Clinical cohort analysis
+
+For downstream reporting against the CGGA clinical data you can run the
+companion analysis helper.  It produces cohort summaries, Kaplan–Meier plots,
+therapy breakdowns, and merges the default APOE genotypes with the clinical
+manifest:
+
+```bash
+python -m apoe_analysis.clinical_analysis \
+  --clinical DATA/CGGA.WEseq_286_clinical.20200506.txt \
+  --output-dir clinical_outputs
+```
+
+Provide `--apoe-genotypes` to use a bespoke manifest (TSV/CSV with
+`Patient_ID`/`APOE_genotype` columns) and `--id-mapping` when the genotype IDs
+need to be matched to CGGA identifiers.  The script creates an Excel workbook
+with all tabulated results plus ready-to-share PNG figures and a JSON manifest
+enumerating the generated artefacts.
+
 ## Your Data
 
 Located in `E:\`:

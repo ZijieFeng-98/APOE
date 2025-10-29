@@ -1,0 +1,3 @@
+Therapy,N,APOE_groups,P_value
+RT+TMZ,11,ε2_carrier vs ε3/ε3,0.8536
+TMZ_only,2,ε2_carrier vs ε3/ε3,0.3173

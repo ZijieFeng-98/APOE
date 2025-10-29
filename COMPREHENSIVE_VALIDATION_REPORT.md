@@ -365,3 +365,4 @@ samtools mpileup -r chr19:45412079-45412079 [BAM_FILE]  # rs7412
 **Next Review:** After confirmation sequencing of HRR024700  
 ======================================================================================
 
+

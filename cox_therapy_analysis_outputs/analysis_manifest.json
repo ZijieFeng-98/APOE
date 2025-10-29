@@ -1,0 +1,14 @@
+{
+  "all_samples": {
+    "n": 25,
+    "cox_table": "cox_therapy_analysis_outputs/all_samples/Table2_Cox_Multivariable_All_Samples.csv",
+    "therapy_km_figure": "cox_therapy_analysis_outputs/all_samples/Fig3_Therapy_Stratified_KM_All_Samples.png",
+    "logrank_results": "cox_therapy_analysis_outputs/all_samples/Therapy_Stratified_LogRank_All_Samples.csv"
+  },
+  "gbm_only": {
+    "n": 17,
+    "cox_table": "cox_therapy_analysis_outputs/gbm_only/Table2_Cox_Multivariable_GBM_Only.csv",
+    "therapy_km_figure": "cox_therapy_analysis_outputs/gbm_only/Fig3_Therapy_Stratified_KM_GBM_Only.png",
+    "logrank_results": "cox_therapy_analysis_outputs/gbm_only/Therapy_Stratified_LogRank_GBM_Only.csv"
+  }
+}

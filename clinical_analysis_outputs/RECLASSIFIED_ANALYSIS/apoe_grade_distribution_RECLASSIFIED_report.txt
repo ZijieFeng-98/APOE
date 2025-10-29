@@ -1,0 +1,88 @@
+====================================================================================================
+APOE GENOTYPE AND ALLELE DISTRIBUTION ANALYSIS BY IDH STATUS
+====================================================================================================
+
+Total Patients: 25
+
+IDH STATUS DISTRIBUTION:
+----------------------------------------
+  Wildtype: n=20 (80.0%)
+  Mutant: n=5 (20.0%)
+
+OVERALL GENOTYPE DISTRIBUTION (All 25 patients):
+  ε2/ε2: 1 (4.0%)
+  ε2/ε3: 7 (28.0%)
+  ε2/ε4: 1 (4.0%)
+  ε3/ε3: 14 (56.0%)
+  ε3/ε4: 1 (4.0%)
+  ε4/ε4: 1 (4.0%)
+
+APOE GENOTYPE DISTRIBUTION BY IDH STATUS:
+----------------------------------------
+
+IDH-Wildtype (n=20):
+  ε2/ε3: n=6 (30.0%)
+  ε2/ε4: n=1 (5.0%)
+  ε3/ε3: n=11 (55.0%)
+  ε3/ε4: n=1 (5.0%)
+  ε4/ε4: n=1 (5.0%)
+
+IDH-Mutant (n=5):
+  ε2/ε2: n=1 (20.0%)
+  ε2/ε3: n=1 (20.0%)
+  ε3/ε3: n=3 (60.0%)
+
+GENOTYPE COUNTS BY IDH STATUS:
+
+APOE_Genotype  ε2/ε2  ε2/ε3  ε2/ε4  ε3/ε3  ε3/ε4  ε4/ε4  Total
+IDH_Status                                                    
+Mutant             1      1      0      3      0      0      5
+Wildtype           0      6      1     11      1      1     20
+Total              1      7      1     14      1      1     25
+
+GENOTYPE PERCENTAGES BY IDH STATUS:
+
+APOE_Genotype  ε2/ε2  ε2/ε3 ε2/ε4  ε3/ε3 ε3/ε4 ε4/ε4
+IDH_Status                                          
+Mutant         20.0%  20.0%  0.0%  60.0%  0.0%  0.0%
+Wildtype        0.0%  30.0%  5.0%  55.0%  5.0%  5.0%
+
+APOE ε4 CARRIER STATUS BY IDH:
+----------------------------------------
+
+IDH-Wildtype (n=20):
+  ε4 carriers: n=3 (15.0%)
+  Non-carriers: n=17 (85.0%)
+
+IDH-Mutant (n=5):
+  ε4 carriers: n=0 (0.0%)
+  Non-carriers: n=5 (100.0%)
+
+APOE ALLELE FREQUENCIES BY IDH STATUS:
+----------------------------------------
+
+IDH-Wildtype:
+  ε2: 17.5% (7/40 alleles)
+  ε3: 72.5% (29/40 alleles)
+  ε4: 10.0% (4/40 alleles)
+
+IDH-Mutant:
+  ε2: 30.0% (3/10 alleles)
+  ε3: 70.0% (7/10 alleles)
+  ε4: 0.0% (0/10 alleles)
+
+STATISTICAL TESTS:
+----------------------------------------
+
+Genotype Distribution vs IDH Status:
+  Chi-square test: χ²=4.911, p=0.4269
+  Result: Not significant (p ≥ 0.05)
+
+====================================================================================================
+KEY OBSERVATIONS:
+  • All ε4 carriers (n=3) are in IDH-wildtype group
+  • IDH-mutant group has no ε4 carriers (0/5)
+  • ε3/ε3 is most common in both groups (55% WT, 60% Mut)
+====================================================================================================
+END OF REPORT
+====================================================================================================

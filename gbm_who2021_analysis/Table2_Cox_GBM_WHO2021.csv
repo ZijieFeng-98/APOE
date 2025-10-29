@@ -1,0 +1,8 @@
+,HR (95% CI),P-value
+Age (per year),1.03 (0.96-1.09),0.456
+Gender (Male vs Female),1.95 (0.18-20.68),0.579
+MGMT (Methylated vs Unmethylated),0.32 (0.06-1.68),0.177
+Radiotherapy (Yes vs No),0.29 (0.04-2.00),0.211
+TMZ Chemotherapy (Yes vs No),0.35 (0.02-5.50),0.454
+APOE (ε2 carrier vs ε3/ε3),0.63 (0.07-5.39),0.672
+APOE (ε4 carrier vs ε3/ε3),0.00 (0.00-inf),0.996
