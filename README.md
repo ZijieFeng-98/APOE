@@ -1,190 +1,125 @@
-# APOE Genotyping Pipeline
+# APOE Clinical Analysis Repository
 
-This pipeline analyzes whole genome sequencing (WGS) data to determine APOE genotype, which is associated with Alzheimer's disease risk.
+End-to-end analysis of the 25 CGGA patients with validated APOE genotypes. The
+repository now only tracks the clinical cohort deliverable (reclassified to
+WHO-2021 rules) plus the supporting genotyping pipeline that produced the
+APOE calls.
 
-## Overview
+## Highlights
 
-The pipeline processes FASTQ files from your CGGA WGS data to identify the two key SNPs that define APOE alleles:
-- **rs429358** (chr19:45411941, C>T)
-- **rs7412** (chr19:45412079, C>T)
+- ✅ **25 patients with confirmed APOE genotypes** (includes HRR024685 ε4/ε4)
+- ✅ **IDH-wildtype reclassified to WHO Grade IV** for survival modelling
+- ✅ **Kaplan–Meier and Cox regression** focussed on ε4 carrier status
+- ✅ **Treatment-stratified figures and tables** ready for presentation
+- ✅ **All raw/external data, scripts, results, and reports organised by role**
 
-These SNPs determine whether you have ε2, ε3, or ε4 alleles.
+Key clinical result: **ε4 carriers show 100% survival in IDH-wildtype GBM**
+(p = 0.0086), with the strongest effect in the RT+TMZ group (p = 0.0401).
 
-## Targeted APOE patches (exon slices)
+## Repository Layout
 
-For rapid demonstrations or validation runs against existing BAM/CRAM files you
-can use the new `apoe_analysis/apoe_patches.py` helper.  It wraps the PI
-"exon 2" patch and the scientific validation track (exon 4 + rs429358/rs7412)
-into reproducible commands:
+```
+data/
+  external/cgga/          # Original CGGA clinical spreadsheets and manifests
+  intermediate/forensic/  # Mapping evidence (BAM headers, sex checks, etc.)
+  processed/              # Final tables (genotypes, ID mapping, metadata)
+  raw/                    # Large FASTQ inputs (not tracked by git)
+  reference/genome_build/ # GRCh37 reference bundle (ignored by git)
+
+pipelines/
+  apoe_genotyping/        # Targeted APOE extraction helpers
+  cohort_patch_validation/
+  patch_validation/
+
+results/
+  clinical/reclassified_cohort/   # Definitive 25-patient analysis package
+  cox/therapy_stratified/         # Cox + KM outputs (all + GBM-only)
+  legacy/gbm_who2021_analysis/    # Deprecated WHO-2016 era runs
+
+docs/      # How-to guides and cleanup notes
+reports/   # Narrative deliverables ready to share
+scripts/
+  analysis/   # End-to-end analysis entry points
+  utilities/  # Helper scripts (metadata checks, install helpers)
+
+pipelines/.../alignment, results, variants  # Supporting genotyping artefacts
+```
+
+## Data Inventory
+
+- `data/external/cgga/` – Raw CGGA clinical spreadsheets, methylation files,
+  and manifest MD5 checks.
+- `data/processed/` – Harmonised tables used by the analysis scripts:
+  `APOE_GENOTYPES.csv`, `FINAL_HRR_CGGA_MAPPING.csv`,
+  `FINAL_HRR_CGGA_MAPPING_WITH_CLINICAL.csv`.
+- `data/intermediate/forensic/` – Evidence produced while verifying HRR ↔ CGGA
+  identities (BAM header matches, sex checks, preliminary matches).
+- `data/raw/` – Sequencing FASTQs for HRR024685 (kept outside git, but stored
+  locally for provenance).
+
+## Running the Clinical Analysis
+
+All orchestrator scripts live in `scripts/analysis/` and expect Python 3.9+.
+
+1. Create / activate environment and install requirements (see
+   `scripts/utilities/install_dependencies.sh` for exact commands).
+2. Generate the merged dataset (optional – already in `data/processed/`):
+   ```bash
+   python scripts/analysis/reclassify_IDH_WT_to_grade4.py \
+     --input data/processed/FINAL_HRR_CGGA_MAPPING_WITH_CLINICAL.csv \
+     --output data/processed/25_samples_RECLASSIFIED.csv
+   ```
+3. Run the full analytical suite (recreates everything in `results/clinical/`):
+   ```bash
+   python scripts/analysis/rerun_all_analyses_RECLASSIFIED.py \
+     --clinical-table data/processed/25_samples_RECLASSIFIED.csv \
+     --output-dir results/clinical/reclassified_cohort
+   ```
+4. Therapy and Cox modelling (reproduces `results/cox/therapy_stratified/`):
+   ```bash
+   python scripts/analysis/survival_cox_IDH_WT_ONLY.py \
+     --clinical-table data/processed/25_samples_RECLASSIFIED.csv \
+     --output-dir results/cox/therapy_stratified
+   ```
+
+All figures, tables, and markdown summaries land in the corresponding results
+directories and are ready for distribution.
+
+## Reproducing Genotyping Artifacts
+
+The `pipelines/apoe_genotyping/` module contains the targeted APOE patching
+helpers used to validate HRR024685:
 
 ```bash
-python -m apoe_analysis.apoe_patches patch-a \
-  --bam /path/to/sample.bam \
-  --reference /path/to/GRCh38.fa \
-  --gtf /path/to/genes.gtf \
-  --output-dir patch_outputs
-
-python -m apoe_analysis.apoe_patches patch-b \
-  --bam /path/to/sample.bam \
-  --reference /path/to/GRCh38.fa \
-  --gtf /path/to/genes.gtf \
-  --output-dir patch_outputs \
-  --build hg38
+python -m pipelines.apoe_genotyping.apoe_patches patch-a \
+  --bam pipelines/apoe_genotyping/alignment/HRR024685.sorted.bam \
+  --reference data/reference/genome_build/human_g1k_v37.fasta \
+  --gtf data/reference/genome_build/apoe_grch37_NCBI_CORRECT.gtf \
+  --output-dir pipelines/apoe_genotyping/results
 ```
 
-* `patch-a` generates exon 2 read slices (`*_APOE_exon2.bam`), reference
-  sequences, and depth summaries exactly as requested by the PI.
-* `patch-b` adds exon 4 extraction plus targeted calls for rs429358/rs7412,
-  producing BAM, FASTA, compressed VCF, and a ready-to-share TSV report.
+The validation bundles (`pipelines/cohort_patch_validation/` and
+`pipelines/patch_validation/`) capture the exon-slice outputs and manifests.
 
-Supply multiple `--bam` arguments (optionally paired with `--label`) to process
-tumour/normal or cohort BAMs together.  Outputs are organised per-sample and a
-JSON manifest summarises the generated artefacts.
+## Key Outputs for Presentations
 
-## Clinical cohort analysis
+- `results/clinical/reclassified_cohort/RECLASSIFIED_ANALYSIS/`
+  - `apoe_grade_distribution_RECLASSIFIED.png`
+  - `survival_IDH_WT_by_APOE.png`
+  - `survival_IDH_WT_by_treatment.png`
+- `results/cox/therapy_stratified/gbm_only/`
+  - `Fig_Treatment_by_APOE_Isoform.png`
+  - `Fig3_Therapy_Stratified_KM_GBM_Only.png`
+- `reports/FINAL_CLINICAL_ANALYSIS_REPORT.md`
+  – Narratives, tables, and interpretation.
 
-For downstream reporting against the CGGA clinical data you can run the
-companion analysis helper.  It produces cohort summaries, Kaplan–Meier plots,
-therapy breakdowns, and merges the default APOE genotypes with the clinical
-manifest:
+## Notes
 
-```bash
-python -m apoe_analysis.clinical_analysis \
-  --clinical DATA/CGGA.WEseq_286_clinical.20200506.txt \
-  --output-dir clinical_outputs
-```
+- Raw sequencing inputs and reference genomes remain outside git history and
+  live under `data/raw/` and `data/reference/` respectively.
+- Pycache artefacts are ignored via `.gitignore`.
+- Legacy WHO-2016 analyses are preserved under `results/legacy/` for traceability
+  but are excluded from new deliverables.
 
-Provide `--apoe-genotypes` to use a bespoke manifest (TSV/CSV with
-`Patient_ID`/`APOE_genotype` columns) and `--id-mapping` when the genotype IDs
-need to be matched to CGGA identifiers.  The script creates an Excel workbook
-with all tabulated results plus ready-to-share PNG figures and a JSON manifest
-enumerating the generated artefacts.
-
-## Your Data
-
-Located in `E:\`:
-- `HRR024685_f1.fq.gz` - Forward reads
-- `HRR024685_r2.fq.gz` - Reverse reads
-
-## Quick Start
-
-### Step 1: Install Required Tools
-
-See `INSTALLATION_GUIDE.md` for detailed instructions.
-
-**Recommended (works on Windows):**
-```bash
-# Install Miniconda, then:
-conda create -n apoe_analysis python=3.9
-conda activate apoe_analysis
-conda install -c bioconda bwa samtools bcftools fastqc
-```
-
-### Step 2: Run the Pipeline
-
-**On Windows with WSL or Git Bash:**
-```bash
-cd /mnt/e/  # or E:/ in Git Bash
-bash apoe_pipeline.sh
-```
-
-**On Windows with Conda:**
-```bash
-conda activate apoe_analysis
-cd /d E:\
-bash apoe_pipeline.sh
-```
-
-### Step 3: View Results
-
-Results will be saved in `E:\apoe_analysis\results\HRR024685_apoe_report.txt`
-
-## What the Pipeline Does
-
-1. **Download Reference Genome** - GRCh37/hg19 human reference (~3 GB)
-2. **Quality Control** - FastQC analysis of your FASTQ files
-3. **Read Alignment** - BWA aligns reads to reference genome
-4. **Extract APOE Region** - Focus on chromosome 19:45409039-45412650
-5. **Variant Calling** - BCFtools identifies variants
-6. **Genotype Determination** - Identifies your APOE alleles (ε2/ε3/ε4)
-7. **Clinical Interpretation** - Provides Alzheimer's disease risk assessment
-
-## APOE Genotypes and Risk
-
-| Genotype | Alzheimer's Risk | Frequency |
-|----------|------------------|-----------|
-| ε2/ε2 | Reduced (~0.5x) | Rare (<1%) |
-| ε2/ε3 | Reduced (~0.6x) | Uncommon (~10%) |
-| ε2/ε4 | Average to Moderate (~2-3x) | Rare (~2%) |
-| ε3/ε3 | Average (1x) | Most common (~60%) |
-| ε3/ε4 | Increased (~3x) | Common (~20%) |
-| ε4/ε4 | Significantly Increased (~8-12x) | Rare (~2%) |
-
-## Important Notes
-
-- APOE genotype is just ONE of many risk factors for Alzheimer's disease
-- Having ε4 alleles does NOT guarantee you will develop Alzheimer's
-- Many people with ε4/ε4 never develop the disease
-- This is for research purposes only
-- Consult a genetic counselor for clinical interpretation
-
-## System Requirements
-
-- **OS**: Windows 10/11 (with WSL or Conda), Linux, or macOS
-- **RAM**: 8 GB minimum (16 GB recommended)
-- **CPU**: 4+ cores recommended
-- **Disk Space**: 50-100 GB free on E:\ drive
-- **Runtime**: 30 minutes to 2 hours
-
-## File Structure
-
-```
-E:\
-├── HRR024685_f1.fq.gz              # Your input FASTQ files
-├── HRR024685_r2.fq.gz
-├── apoe_pipeline.sh                # Main pipeline script
-├── reference/                       # Reference genome (auto-downloaded)
-│   └── human_g1k_v37.fasta
-└── apoe_analysis/                   # Output directory
-    ├── qc/                          # FastQC reports
-    ├── alignment/                   # BAM files
-    ├── variants/                    # VCF files
-    └── results/                     # Final APOE genotype report
-```
-
-## Troubleshooting
-
-See `INSTALLATION_GUIDE.md` for common issues and solutions.
-
-**Common Issues:**
-- **Out of memory**: Reduce threads in script (change `THREADS=4` to `THREADS=2`)
-- **Command not found**: Make sure conda environment is activated
-- **Path errors on Windows**: Run from WSL where E:\ is `/mnt/e/`
-- **Download fails**: Manually download reference genome (see installation guide)
-
-## Technical Details
-
-- **Reference**: GRCh37/hg19 (1000 Genomes Phase 2)
-- **Aligner**: BWA-MEM
-- **Variant Caller**: BCFtools mpileup + call
-- **APOE Region**: chr19:45409039-45412650 (3,611 bp)
-- **Gene**: APOE gene, exon 4
-
-## Support
-
-For issues or questions:
-1. Check `INSTALLATION_GUIDE.md`
-2. Ensure all tools are properly installed: `bwa`, `samtools`, `bcftools`, `python3`
-3. Verify input files exist in E:\
-4. Check you have sufficient disk space
-
-## License
-
-This pipeline is for research and educational purposes only.
-
-## References
-
-1. Genin et al. (2011) "APOE and Alzheimer's disease: a major gene with semi-dominant inheritance"
-2. Farrer et al. (1997) "Effects of age, sex, and ethnicity on the association between apolipoprotein E genotype and Alzheimer disease"
-3. Liu et al. (2013) "Apolipoprotein E and Alzheimer disease: risk, mechanisms and therapy"
+For questions or further adjustments, start with `docs/CLINICAL_ANALYSIS_GUIDE.md`.
 
